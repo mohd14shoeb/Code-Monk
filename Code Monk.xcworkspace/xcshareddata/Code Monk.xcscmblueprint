@@ -1,0 +1,28 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "DD97A836B3E1905E7FA83A62B9750DC4D2CEF9FC",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "DD97A836B3E1905E7FA83A62B9750DC4D2CEF9FC" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "21051006-A60F-41CF-A28D-3637102F5073",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "DD97A836B3E1905E7FA83A62B9750DC4D2CEF9FC" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Code Monk",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Code Monk.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ygit\/Code-Monk.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DD97A836B3E1905E7FA83A62B9750DC4D2CEF9FC"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ygit\/Code-Monk.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DD97A836B3E1905E7FA83A62B9750DC4D2CEF9FC"
+    }
+  ]
+}

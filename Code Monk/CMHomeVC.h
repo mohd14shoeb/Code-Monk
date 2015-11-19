@@ -1,5 +1,5 @@
 //
-//  CMViewController.h
+//  CMHomeVC.h
 //  Code Monk
 //
 //  Created by yogesh singh on 18/11/15.
@@ -8,7 +8,7 @@
 
 @import UIKit;
 
-@interface CMViewController : UIViewController
+@interface CMHomeVC : UIViewController
 
 @end
 

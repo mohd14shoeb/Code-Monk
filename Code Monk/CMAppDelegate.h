@@ -8,6 +8,7 @@
 
 @import UIKit;
 @import CoreData;
+@import QuartzCore;
 
 @interface CMAppDelegate : UIResponder <UIApplicationDelegate>
 

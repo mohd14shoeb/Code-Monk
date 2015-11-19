@@ -10,10 +10,18 @@
 		966BAE1C93E6E990DBB201DA /* libPods-Code Monk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EDB6EC1AC956A2DF3A79DAE /* libPods-Code Monk.a */; };
 		EC491D261BFC845A0001802F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC491D251BFC845A0001802F /* main.m */; };
 		EC491D291BFC845A0001802F /* CMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC491D281BFC845A0001802F /* CMAppDelegate.m */; };
-		EC491D2C1BFC845A0001802F /* CMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC491D2B1BFC845A0001802F /* CMViewController.m */; };
+		EC491D2C1BFC845A0001802F /* CMHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EC491D2B1BFC845A0001802F /* CMHomeVC.m */; };
 		EC491D321BFC845B0001802F /* Code_Monk.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC491D301BFC845A0001802F /* Code_Monk.xcdatamodeld */; };
-		EC491D341BFC845B0001802F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC491D331BFC845B0001802F /* Assets.xcassets */; };
 		EC491D371BFC845B0001802F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC491D351BFC845B0001802F /* LaunchScreen.storyboard */; };
+		EC5B769F1BFDA22E00C79D79 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC5B769E1BFDA22E00C79D79 /* Media.xcassets */; };
+		EC5B76A11BFDA28E00C79D79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC5B76A01BFDA28E00C79D79 /* Assets.xcassets */; };
+		EC5B76A41BFDA9E700C79D79 /* CMUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5B76A31BFDA9E700C79D79 /* CMUtils.m */; };
+		EC5B76AA1BFDD1DE00C79D79 /* CMServerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5B76A91BFDD1DE00C79D79 /* CMServerHelper.m */; };
+		EC5B76AD1BFDD57100C79D79 /* CMDataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5B76AC1BFDD57100C79D79 /* CMDataParser.m */; };
+		EC5B76B21BFDDAA900C79D79 /* Topic+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5B76AF1BFDDAA900C79D79 /* Topic+CoreDataProperties.m */; };
+		EC5B76B31BFDDAA900C79D79 /* Topic.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5B76B11BFDDAA900C79D79 /* Topic.m */; };
+		EC5B76B61BFDDFAF00C79D79 /* CMDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5B76B51BFDDFAF00C79D79 /* CMDataProvider.m */; };
+		EC5B76C51BFE1B9500C79D79 /* CMHomeViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5B76C41BFE1B9500C79D79 /* CMHomeViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,12 +32,28 @@
 		EC491D251BFC845A0001802F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EC491D271BFC845A0001802F /* CMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMAppDelegate.h; sourceTree = "<group>"; };
 		EC491D281BFC845A0001802F /* CMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMAppDelegate.m; sourceTree = "<group>"; };
-		EC491D2A1BFC845A0001802F /* CMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMViewController.h; sourceTree = "<group>"; };
-		EC491D2B1BFC845A0001802F /* CMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMViewController.m; sourceTree = "<group>"; };
+		EC491D2A1BFC845A0001802F /* CMHomeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHomeVC.h; sourceTree = "<group>"; };
+		EC491D2B1BFC845A0001802F /* CMHomeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHomeVC.m; sourceTree = "<group>"; };
 		EC491D311BFC845A0001802F /* Code_Monk.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Code_Monk.xcdatamodel; sourceTree = "<group>"; };
-		EC491D331BFC845B0001802F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC491D361BFC845B0001802F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC491D381BFC845B0001802F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC5B769E1BFDA22E00C79D79 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		EC5B76A01BFDA28E00C79D79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EC5B76A21BFDA9E700C79D79 /* CMUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMUtils.h; sourceTree = "<group>"; };
+		EC5B76A31BFDA9E700C79D79 /* CMUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMUtils.m; sourceTree = "<group>"; };
+		EC5B76A81BFDD1DE00C79D79 /* CMServerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMServerHelper.h; sourceTree = "<group>"; };
+		EC5B76A91BFDD1DE00C79D79 /* CMServerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMServerHelper.m; sourceTree = "<group>"; };
+		EC5B76AB1BFDD57100C79D79 /* CMDataParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDataParser.h; sourceTree = "<group>"; };
+		EC5B76AC1BFDD57100C79D79 /* CMDataParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDataParser.m; sourceTree = "<group>"; };
+		EC5B76AE1BFDDAA900C79D79 /* Topic+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Topic+CoreDataProperties.h"; sourceTree = "<group>"; };
+		EC5B76AF1BFDDAA900C79D79 /* Topic+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Topic+CoreDataProperties.m"; sourceTree = "<group>"; };
+		EC5B76B01BFDDAA900C79D79 /* Topic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Topic.h; sourceTree = "<group>"; };
+		EC5B76B11BFDDAA900C79D79 /* Topic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Topic.m; sourceTree = "<group>"; };
+		EC5B76B41BFDDFAF00C79D79 /* CMDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDataProvider.h; sourceTree = "<group>"; };
+		EC5B76B51BFDDFAF00C79D79 /* CMDataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDataProvider.m; sourceTree = "<group>"; };
+		EC5B76B71BFDDFDD00C79D79 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		EC5B76C31BFE1B9500C79D79 /* CMHomeViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMHomeViewCell.h; sourceTree = "<group>"; };
+		EC5B76C41BFE1B9500C79D79 /* CMHomeViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMHomeViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +88,7 @@
 		EC491D181BFC845A0001802F = {
 			isa = PBXGroup;
 			children = (
+				EC5B76B71BFDDFDD00C79D79 /* README.md */,
 				EC491D231BFC845A0001802F /* Code Monk */,
 				EC491D221BFC845A0001802F /* Products */,
 				870BA19E22FCC25B28A77B86 /* Pods */,
@@ -98,7 +123,8 @@
 				EC491D381BFC845B0001802F /* Info.plist */,
 				EC491D251BFC845A0001802F /* main.m */,
 				EC491D351BFC845B0001802F /* LaunchScreen.storyboard */,
-				EC491D331BFC845B0001802F /* Assets.xcassets */,
+				EC5B76A01BFDA28E00C79D79 /* Assets.xcassets */,
+				EC5B769E1BFDA22E00C79D79 /* Media.xcassets */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -106,6 +132,10 @@
 		EC491D3F1BFC88F30001802F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EC5B76AE1BFDDAA900C79D79 /* Topic+CoreDataProperties.h */,
+				EC5B76AF1BFDDAA900C79D79 /* Topic+CoreDataProperties.m */,
+				EC5B76B01BFDDAA900C79D79 /* Topic.h */,
+				EC5B76B11BFDDAA900C79D79 /* Topic.m */,
 				EC491D301BFC845A0001802F /* Code_Monk.xcdatamodeld */,
 			);
 			name = Model;
@@ -114,8 +144,10 @@
 		EC491D401BFC890F0001802F /* View Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				EC491D2A1BFC845A0001802F /* CMViewController.h */,
-				EC491D2B1BFC845A0001802F /* CMViewController.m */,
+				EC491D2A1BFC845A0001802F /* CMHomeVC.h */,
+				EC491D2B1BFC845A0001802F /* CMHomeVC.m */,
+				EC5B76C31BFE1B9500C79D79 /* CMHomeViewCell.h */,
+				EC5B76C41BFE1B9500C79D79 /* CMHomeViewCell.m */,
 			);
 			name = "View Helpers";
 			sourceTree = "<group>";
@@ -123,6 +155,14 @@
 		EC491D411BFC893A0001802F /* Data Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				EC5B76A81BFDD1DE00C79D79 /* CMServerHelper.h */,
+				EC5B76A91BFDD1DE00C79D79 /* CMServerHelper.m */,
+				EC5B76AB1BFDD57100C79D79 /* CMDataParser.h */,
+				EC5B76AC1BFDD57100C79D79 /* CMDataParser.m */,
+				EC5B76B41BFDDFAF00C79D79 /* CMDataProvider.h */,
+				EC5B76B51BFDDFAF00C79D79 /* CMDataProvider.m */,
+				EC5B76A21BFDA9E700C79D79 /* CMUtils.h */,
+				EC5B76A31BFDA9E700C79D79 /* CMUtils.m */,
 			);
 			name = "Data Helpers";
 			sourceTree = "<group>";
@@ -188,7 +228,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC491D371BFC845B0001802F /* LaunchScreen.storyboard in Resources */,
-				EC491D341BFC845B0001802F /* Assets.xcassets in Resources */,
+				EC5B76A11BFDA28E00C79D79 /* Assets.xcassets in Resources */,
+				EC5B769F1BFDA22E00C79D79 /* Media.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,10 +288,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC491D2C1BFC845A0001802F /* CMViewController.m in Sources */,
+				EC5B76AD1BFDD57100C79D79 /* CMDataParser.m in Sources */,
+				EC491D2C1BFC845A0001802F /* CMHomeVC.m in Sources */,
+				EC5B76B61BFDDFAF00C79D79 /* CMDataProvider.m in Sources */,
+				EC5B76A41BFDA9E700C79D79 /* CMUtils.m in Sources */,
+				EC5B76B31BFDDAA900C79D79 /* Topic.m in Sources */,
 				EC491D321BFC845B0001802F /* Code_Monk.xcdatamodeld in Sources */,
 				EC491D291BFC845A0001802F /* CMAppDelegate.m in Sources */,
+				EC5B76AA1BFDD1DE00C79D79 /* CMServerHelper.m in Sources */,
 				EC491D261BFC845A0001802F /* main.m in Sources */,
+				EC5B76B21BFDDAA900C79D79 /* Topic+CoreDataProperties.m in Sources */,
+				EC5B76C51BFE1B9500C79D79 /* CMHomeViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +408,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hackerearth.Code-Monk";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -373,6 +422,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hackerearth.Code-Monk";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

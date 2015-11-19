@@ -7,6 +7,8 @@
 //
 
 #import "CMAppDelegate.h"
+#import "CMHomeVC.h"
+
 
 @interface CMAppDelegate ()
 
@@ -14,9 +16,21 @@
 
 @implementation CMAppDelegate
 
+@synthesize window;
+
+#pragma mark - Lifecycle
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    CMHomeVC *homeVC = [[CMHomeVC alloc] init];
+    
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:homeVC];
+    
+    window.rootViewController = navController;
+    
+    [window makeKeyAndVisible];
     return YES;
 }
 
@@ -44,7 +58,8 @@
     [self saveContext];
 }
 
-#pragma mark - Core Data stack
+
+#pragma mark - Core Data Stack
 
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
@@ -108,8 +123,6 @@
     [_managedObjectContext setPersistentStoreCoordinator:coordinator];
     return _managedObjectContext;
 }
-
-#pragma mark - Core Data Saving support
 
 - (void)saveContext {
     NSManagedObjectContext *managedObjectContext = self.managedObjectContext;

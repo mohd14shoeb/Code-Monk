@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>MarqueeLabel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Code Monk.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>1A3155A1CE86FD415A2FA193545BAB2E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>410B25DF16EA5C5B3E2698F74F9625FB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>60FE5E15F55746F90EEEA1FF64713325</key>
+		<key>4E0DA736829FBEDD2B4889C7C03BAE58</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EC0DE5B631CF779FCF4E4E9FDB0FEDC8</key>
+		<key>E8BD3E45608374DF2C1F6446F6FF553A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -36,4 +36,52 @@
     }];
 }
 
++ (void)fetchDetailsOfTopic:(NSNumber *)idValue{
+
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    
+    AFJSONRequestSerializer *requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    [requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    
+    manager.requestSerializer = requestSerializer;
+    
+    NSDictionary *params = [NSDictionary dictionaryWithObject:idValue forKey:@"id"];
+    
+    [manager POST:TOPICDETAILS
+       parameters:params
+          success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+
+        NSLog(@"responseObject : %@",responseObject);
+        
+        
+    } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
+        
+        NSLog(@"error : %@", error.localizedDescription);
+        
+    }];
+}
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

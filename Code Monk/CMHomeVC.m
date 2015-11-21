@@ -10,6 +10,7 @@
 #import "CMServerHelper.h"
 #import "CMDataProvider.h"
 #import "CMHomeViewCell.h"
+#import "CMTopicsListVC.h"
 #import "CMUtils.h"
 
 NSString *cellIdentifier = @"cellIdentifier";
@@ -33,11 +34,12 @@ NSString *cellIdentifier = @"cellIdentifier";
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     layout.minimumInteritemSpacing = 5.0f;
     layout.minimumLineSpacing = 20.0f;
+    layout.sectionInset = UIEdgeInsetsMake(0, 20, 0, 20);
     
     gridView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:layout];
     [gridView setDelegate:self];
     [gridView setDataSource:self];
-    [gridView setBounces:YES];
+    [gridView setContentOffset:CGPointZero];
     [gridView setBackgroundColor:[UIColor clearColor]];
     [gridView registerClass:[CMHomeViewCell class] forCellWithReuseIdentifier:cellIdentifier];
     [self.view addSubview:gridView];
@@ -49,20 +51,35 @@ NSString *cellIdentifier = @"cellIdentifier";
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
-                                                  forBarMetrics:UIBarMetricsDefault];
-    self.navigationItem.title = @"Code Monk";
-    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateAllTopics:)
                                                  name:UPDATED_ALL_TOPICS object:nil];
+    
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
+                                                  forBarMetrics:UIBarMetricsDefault];
+
+    UIView *titleView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 135, 45)];
+    UIImageView *img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo"]];
+    img.frame = CGRectMake(0, 2.5, 40, 40);
+    [titleView addSubview:img];
+    UILabel *titleLab = [[UILabel alloc] initWithFrame:CGRectMake(img.frame.origin.x + img.frame.size.width + 5, 0, 85, 45)];
+    titleLab.font = [UIFont boldSystemFontOfSize:24];
+    titleLab.text = @"Code Monk";
+    titleLab.adjustsFontSizeToFitWidth = YES;
+    [titleView addSubview:titleLab];
+    titleView.center = self.navigationItem.titleView.center;
+    self.navigationItem.titleView = titleView;
 }
 
 - (void)viewWillLayoutSubviews{
     [super viewWillLayoutSubviews];
     
     [self setGradient];
-    
+
     gridView.frame = self.view.frame;
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
 }
 
 - (void)viewWillDisappear:(BOOL)animated{
@@ -101,7 +118,9 @@ NSString *cellIdentifier = @"cellIdentifier";
 
 #pragma mark - Collection View Helpers
 
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+- (CGSize)collectionView:(UICollectionView *)collectionView
+                  layout:(UICollectionViewLayout*)collectionViewLayout
+  sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
     
     CGSize size = CGSizeZero;
     
@@ -109,18 +128,17 @@ NSString *cellIdentifier = @"cellIdentifier";
         size = CGSizeMake(self.view.frame.size.width, 180);
     }
     else if (indexPath.row == (dataArr.count-1)){
-        size = CGSizeMake(self.view.frame.size.width, 60);
+        size = CGSizeMake(self.view.frame.size.width - 40, 60);
     }
     else {
-        size = CGSizeMake(self.view.frame.size.width/2.5, 90);
+        size = CGSizeMake((self.view.frame.size.width-80)/2, 90);
     }
     
     return size;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    
-    //NSLog(@"dataArr.count : %lu",(unsigned long)dataArr.count);
+
     return dataArr.count;
 }
 
@@ -141,7 +159,19 @@ NSString *cellIdentifier = @"cellIdentifier";
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"didSelectItemAtIndexPath");
+    
+    if (indexPath.row < dataArr.count) {
+        
+        CMTopicsListVC *topicsVC = [[CMTopicsListVC alloc] init];
+        
+        topicsVC.titleStr = (indexPath.row == 0) ? @"All Topics" : dataArr[indexPath.row];
+        
+        topicsVC.dataArr = [CMDataProvider getAllTopicsByFilter:(indexPath.row == 0) ? nil : dataArr[indexPath.row]];
+        
+        [self.navigationController showViewController:topicsVC sender:nil];
+    }
+    
+    [collectionView deselectItemAtIndexPath:indexPath animated:YES];
 }
 
 @end

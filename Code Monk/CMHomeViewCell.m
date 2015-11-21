@@ -20,7 +20,7 @@
         
         titleLab = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
         titleLab.textAlignment = NSTextAlignmentCenter;
-        titleLab.numberOfLines = 0;
+        titleLab.numberOfLines = 2;
         titleLab.font = FONT_LRG;
         titleLab.textColor = [UIColor blackColor];
         titleLab.adjustsFontSizeToFitWidth = YES;
@@ -46,6 +46,10 @@
     [super setFrame:frame];
     
     titleLab.frame = CGRectMake(0, 0, frame.size.width, frame.size.height);
+    
+    UIView *bgView = [[UIView alloc] initWithFrame:frame];
+    bgView.backgroundColor = [UIColor lightGrayColor];
+    self.selectedBackgroundView = bgView;
 }
 
 - (void)prepareForReuse{

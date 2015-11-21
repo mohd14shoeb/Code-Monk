@@ -13,6 +13,7 @@
 		EC491D2C1BFC845A0001802F /* CMHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EC491D2B1BFC845A0001802F /* CMHomeVC.m */; };
 		EC491D321BFC845B0001802F /* Code_Monk.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC491D301BFC845A0001802F /* Code_Monk.xcdatamodeld */; };
 		EC491D371BFC845B0001802F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC491D351BFC845B0001802F /* LaunchScreen.storyboard */; };
+		EC5488BF1C004EFA00449F96 /* CMTopicsListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5488BE1C004EFA00449F96 /* CMTopicsListVC.m */; };
 		EC5B769F1BFDA22E00C79D79 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC5B769E1BFDA22E00C79D79 /* Media.xcassets */; };
 		EC5B76A11BFDA28E00C79D79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC5B76A01BFDA28E00C79D79 /* Assets.xcassets */; };
 		EC5B76A41BFDA9E700C79D79 /* CMUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5B76A31BFDA9E700C79D79 /* CMUtils.m */; };
@@ -37,6 +38,8 @@
 		EC491D311BFC845A0001802F /* Code_Monk.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Code_Monk.xcdatamodel; sourceTree = "<group>"; };
 		EC491D361BFC845B0001802F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC491D381BFC845B0001802F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC5488BD1C004EFA00449F96 /* CMTopicsListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMTopicsListVC.h; sourceTree = "<group>"; };
+		EC5488BE1C004EFA00449F96 /* CMTopicsListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMTopicsListVC.m; sourceTree = "<group>"; };
 		EC5B769E1BFDA22E00C79D79 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		EC5B76A01BFDA28E00C79D79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC5B76A21BFDA9E700C79D79 /* CMUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMUtils.h; sourceTree = "<group>"; };
@@ -148,6 +151,8 @@
 				EC491D2B1BFC845A0001802F /* CMHomeVC.m */,
 				EC5B76C31BFE1B9500C79D79 /* CMHomeViewCell.h */,
 				EC5B76C41BFE1B9500C79D79 /* CMHomeViewCell.m */,
+				EC5488BD1C004EFA00449F96 /* CMTopicsListVC.h */,
+				EC5488BE1C004EFA00449F96 /* CMTopicsListVC.m */,
 			);
 			name = "View Helpers";
 			sourceTree = "<group>";
@@ -290,6 +295,7 @@
 			files = (
 				EC5B76AD1BFDD57100C79D79 /* CMDataParser.m in Sources */,
 				EC491D2C1BFC845A0001802F /* CMHomeVC.m in Sources */,
+				EC5488BF1C004EFA00449F96 /* CMTopicsListVC.m in Sources */,
 				EC5B76B61BFDDFAF00C79D79 /* CMDataProvider.m in Sources */,
 				EC5B76A41BFDA9E700C79D79 /* CMUtils.m in Sources */,
 				EC5B76B31BFDDAA900C79D79 /* Topic.m in Sources */,

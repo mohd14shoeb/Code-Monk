@@ -18,7 +18,6 @@
     CGContextSetInterpolationQuality(ctx, kCGInterpolationMedium);
     [image drawInRect:(CGRect){.size = size} blendMode:kCGBlendModeCopy alpha:1];
     uint8_t *data = CGBitmapContextGetData(ctx);
-//    NSLog(@"R : %hhu G : %hhu B : %hhu", data[2], data[1], data[0]);
     UIColor *color = [UIColor colorWithRed:data[2] / 255.0f
                                      green:data[1] / 255.0f
                                       blue:data[0] / 255.0f

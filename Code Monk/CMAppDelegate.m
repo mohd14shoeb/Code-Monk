@@ -28,6 +28,8 @@
     
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:homeVC];
     
+    navController.navigationBar.tintColor = [UIColor darkGrayColor];
+    
     window.rootViewController = navController;
     
     [window makeKeyAndVisible];

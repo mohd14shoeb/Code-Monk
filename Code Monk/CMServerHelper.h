@@ -8,8 +8,10 @@
 
 @import Foundation;
 
-@interface CMServerHelper : NSObject
+@interface CMServerHelper : NSObject 
 
 + (void)fetchAllTopics;
+
++ (void)fetchDetailsOfTopic:(NSNumber *)idValue;
 
 @end

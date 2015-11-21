@@ -2,7 +2,7 @@
 //  Topic+CoreDataProperties.m
 //  Code Monk
 //
-//  Created by yogesh singh on 19/11/15.
+//  Created by yogesh singh on 21/11/15.
 //  Copyright © 2015 yogesh singh. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -13,9 +13,12 @@
 
 @implementation Topic (CoreDataProperties)
 
-@dynamic idValue;
-@dynamic title;
-@dynamic text;
 @dynamic category;
+@dynamic idValue;
+@dynamic text;
+@dynamic title;
+@dynamic link;
+@dynamic note;
+@dynamic isBookmarked;
 
 @end

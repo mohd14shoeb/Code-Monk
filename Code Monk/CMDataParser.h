@@ -12,4 +12,6 @@
 
 + (void)parseAllTopicsInResponse:(id)response;
 
++ (void)parseTopicDetailsInResponse:(id)response;
+
 @end

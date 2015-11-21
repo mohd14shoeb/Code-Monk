@@ -7,6 +7,8 @@
 //
 
 #import "CMTopicsListVC.h"
+#import "CMServerHelper.h"
+#import "CMTopicDetailsVC.h"
 #import "CMUtils.h"
 
 @interface CMTopicsListVC () <UITableViewDelegate, UITableViewDataSource>
@@ -94,6 +96,7 @@ NSString *cellId = @"cellId";
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellId];
         cell.textLabel.font = [UIFont boldSystemFontOfSize:18];
         cell.backgroundColor = [UIColor clearColor];
+        cell.selectionStyle = UITableViewCellSelectionStyleBlue;
     }
     
     if (indexPath.row < dataArr.count) {
@@ -111,7 +114,13 @@ NSString *cellId = @"cellId";
     
     if (indexPath.row < dataArr.count) {
         
+        Topic *selectedTopic = dataArr[indexPath.row];
+        CMTopicDetailsVC *detailsVC = [[CMTopicDetailsVC alloc] init];
+        detailsVC.topicObj = selectedTopic;
+        [self.navigationController showViewController:detailsVC sender:nil];
     }
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end

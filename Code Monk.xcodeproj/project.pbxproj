@@ -23,6 +23,7 @@
 		EC5B76B31BFDDAA900C79D79 /* Topic.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5B76B11BFDDAA900C79D79 /* Topic.m */; };
 		EC5B76B61BFDDFAF00C79D79 /* CMDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5B76B51BFDDFAF00C79D79 /* CMDataProvider.m */; };
 		EC5B76C51BFE1B9500C79D79 /* CMHomeViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5B76C41BFE1B9500C79D79 /* CMHomeViewCell.m */; };
+		ECFC11CF1C009DD400BA1A96 /* CMTopicDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFC11CE1C009DD400BA1A96 /* CMTopicDetailsVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,8 @@
 		EC5B76B71BFDDFDD00C79D79 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		EC5B76C31BFE1B9500C79D79 /* CMHomeViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMHomeViewCell.h; sourceTree = "<group>"; };
 		EC5B76C41BFE1B9500C79D79 /* CMHomeViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMHomeViewCell.m; sourceTree = "<group>"; };
+		ECFC11CD1C009DD400BA1A96 /* CMTopicDetailsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMTopicDetailsVC.h; sourceTree = "<group>"; };
+		ECFC11CE1C009DD400BA1A96 /* CMTopicDetailsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMTopicDetailsVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,11 +138,11 @@
 		EC491D3F1BFC88F30001802F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EC491D301BFC845A0001802F /* Code_Monk.xcdatamodeld */,
 				EC5B76AE1BFDDAA900C79D79 /* Topic+CoreDataProperties.h */,
 				EC5B76AF1BFDDAA900C79D79 /* Topic+CoreDataProperties.m */,
 				EC5B76B01BFDDAA900C79D79 /* Topic.h */,
 				EC5B76B11BFDDAA900C79D79 /* Topic.m */,
-				EC491D301BFC845A0001802F /* Code_Monk.xcdatamodeld */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -147,12 +150,9 @@
 		EC491D401BFC890F0001802F /* View Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				EC491D2A1BFC845A0001802F /* CMHomeVC.h */,
-				EC491D2B1BFC845A0001802F /* CMHomeVC.m */,
-				EC5B76C31BFE1B9500C79D79 /* CMHomeViewCell.h */,
-				EC5B76C41BFE1B9500C79D79 /* CMHomeViewCell.m */,
-				EC5488BD1C004EFA00449F96 /* CMTopicsListVC.h */,
-				EC5488BE1C004EFA00449F96 /* CMTopicsListVC.m */,
+				ECFC11CA1C00963400BA1A96 /* Home View */,
+				ECFC11CB1C00964E00BA1A96 /* Topics List */,
+				ECFC11CC1C00965F00BA1A96 /* Topic Details */,
 			);
 			name = "View Helpers";
 			sourceTree = "<group>";
@@ -170,6 +170,35 @@
 				EC5B76A31BFDA9E700C79D79 /* CMUtils.m */,
 			);
 			name = "Data Helpers";
+			sourceTree = "<group>";
+		};
+		ECFC11CA1C00963400BA1A96 /* Home View */ = {
+			isa = PBXGroup;
+			children = (
+				EC491D2A1BFC845A0001802F /* CMHomeVC.h */,
+				EC491D2B1BFC845A0001802F /* CMHomeVC.m */,
+				EC5B76C31BFE1B9500C79D79 /* CMHomeViewCell.h */,
+				EC5B76C41BFE1B9500C79D79 /* CMHomeViewCell.m */,
+			);
+			name = "Home View";
+			sourceTree = "<group>";
+		};
+		ECFC11CB1C00964E00BA1A96 /* Topics List */ = {
+			isa = PBXGroup;
+			children = (
+				EC5488BD1C004EFA00449F96 /* CMTopicsListVC.h */,
+				EC5488BE1C004EFA00449F96 /* CMTopicsListVC.m */,
+			);
+			name = "Topics List";
+			sourceTree = "<group>";
+		};
+		ECFC11CC1C00965F00BA1A96 /* Topic Details */ = {
+			isa = PBXGroup;
+			children = (
+				ECFC11CD1C009DD400BA1A96 /* CMTopicDetailsVC.h */,
+				ECFC11CE1C009DD400BA1A96 /* CMTopicDetailsVC.m */,
+			);
+			name = "Topic Details";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,6 +331,7 @@
 				EC491D321BFC845B0001802F /* Code_Monk.xcdatamodeld in Sources */,
 				EC491D291BFC845A0001802F /* CMAppDelegate.m in Sources */,
 				EC5B76AA1BFDD1DE00C79D79 /* CMServerHelper.m in Sources */,
+				ECFC11CF1C009DD400BA1A96 /* CMTopicDetailsVC.m in Sources */,
 				EC491D261BFC845A0001802F /* main.m in Sources */,
 				EC5B76B21BFDDAA900C79D79 /* Topic+CoreDataProperties.m in Sources */,
 				EC5B76C51BFE1B9500C79D79 /* CMHomeViewCell.m in Sources */,

@@ -32,7 +32,7 @@ NSString *cellIdentifier = @"cellIdentifier";
     [super viewDidLoad];
     
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-    layout.minimumInteritemSpacing = 5.0f;
+    layout.minimumInteritemSpacing = 0.0f;
     layout.minimumLineSpacing = 20.0f;
     layout.sectionInset = UIEdgeInsetsMake(0, 20, 0, 20);
     
@@ -60,6 +60,7 @@ NSString *cellIdentifier = @"cellIdentifier";
     UIView *titleView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 135, 45)];
     UIImageView *img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo"]];
     img.frame = CGRectMake(0, 2.5, 40, 40);
+    img.contentMode = UIViewContentModeScaleAspectFit;
     [titleView addSubview:img];
     UILabel *titleLab = [[UILabel alloc] initWithFrame:CGRectMake(img.frame.origin.x + img.frame.size.width + 5, 0, 85, 45)];
     titleLab.font = [UIFont boldSystemFontOfSize:24];

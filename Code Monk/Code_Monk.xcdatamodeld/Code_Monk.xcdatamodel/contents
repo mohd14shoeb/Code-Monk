@@ -3,10 +3,13 @@
     <entity name="Topic" representedClassName="Topic" syncable="YES">
         <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="idValue" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isBookmarked" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="link" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="note" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Topic" positionX="-63" positionY="-18" width="128" height="105"/>
+        <element name="Topic" positionX="-63" positionY="-18" width="128" height="150"/>
     </elements>
 </model>

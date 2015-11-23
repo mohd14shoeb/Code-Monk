@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>DZNSegmentedControl.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,17 +42,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>254AA959799E847CFE892578D5DA3C47</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>2C195C58B69EFAE447A045518C75F6F2</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>410B25DF16EA5C5B3E2698F74F9625FB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9060A549927BAD9252DB0892F797E666</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>918C8A46ED2A3D96A16681DD42F43000</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B199CA0263BC9BE984D1CF27914F8E37</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -29,7 +29,8 @@
         self.backgroundColor = [CMUtils getAverageColorFromImage:appIcon];
         
         self.layer.borderWidth = 1.0f;
-        self.layer.borderColor = [[UIColor blackColor] CGColor];
+        self.layer.borderColor = [[UIColor whiteColor] CGColor];
+        self.layer.cornerRadius = 10.0f;
         
         UIBezierPath *shadow = [UIBezierPath bezierPathWithRect:self.bounds];
         self.layer.masksToBounds = NO;

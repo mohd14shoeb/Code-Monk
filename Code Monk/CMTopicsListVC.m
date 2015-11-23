@@ -117,6 +117,7 @@ NSString *cellId = @"cellId";
         Topic *selectedTopic = dataArr[indexPath.row];
         CMTopicDetailsVC *detailsVC = [[CMTopicDetailsVC alloc] init];
         detailsVC.topicObj = selectedTopic;
+        detailsVC.titleStr = selectedTopic.title;
         [self.navigationController showViewController:detailsVC sender:nil];
     }
     

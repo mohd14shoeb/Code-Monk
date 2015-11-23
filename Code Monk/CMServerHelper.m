@@ -8,6 +8,7 @@
 
 #import <AFNetworking/AFNetworking.h>
 
+#import "UIView+Toast.h"
 #import "MBProgressHUD.h"
 #import "CMServerHelper.h"
 #import "CMDataParser.h"
@@ -57,6 +58,7 @@
         NSLog(@"error : %@", error.localizedDescription);
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
         [MBProgressHUD hideAllHUDsForView:appDelegate.window animated:YES];
+        [appDelegate.window makeToast:error.localizedDescription];
     }];
 }
 

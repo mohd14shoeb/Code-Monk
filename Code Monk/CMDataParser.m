@@ -108,16 +108,16 @@
         //ignore for now
     }
     
-//    if ([appDelegate.managedObjectContext hasChanges]) {
-//
-//        NSError *saveErr = nil;
-//        if ([appDelegate.managedObjectContext save:&saveErr]) {
-//            [[NSNotificationCenter defaultCenter] postNotificationName:UPDATED_TOPIC_DETAILS object:nil userInfo:@{@"topicObject":topicToUpdate}];
-//        }
-//        else{
-//            NSLog(@"CMDataParser parseTopicDetailsInResponse save error : %@", saveErr.localizedDescription);
-//        }
-//    }
+    if ([appDelegate.managedObjectContext hasChanges]) {
+
+        NSError *saveErr = nil;
+        if ([appDelegate.managedObjectContext save:&saveErr]) {
+            [[NSNotificationCenter defaultCenter] postNotificationName:UPDATED_TOPIC_DETAILS object:nil userInfo:@{@"topicObject":topicToUpdate}];
+        }
+        else{
+            NSLog(@"CMDataParser parseTopicDetailsInResponse save error : %@", saveErr.localizedDescription);
+        }
+    }
 }
 
 @end

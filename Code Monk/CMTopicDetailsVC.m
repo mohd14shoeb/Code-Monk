@@ -7,10 +7,12 @@
 //
 
 #import "CMTopicDetailsVC.h"
+
+#import "DZNSegmentedControl.h"
 #import "CMServerHelper.h"
 #import "CMUtils.h"
 
-@interface CMTopicDetailsVC ()
+@interface CMTopicDetailsVC () <UIWebViewDelegate>
 
 @property (nonatomic, strong) UIWebView *webView;
 @property (nonatomic, strong) UITableView *table;
@@ -18,7 +20,7 @@
 @end
 
 @implementation CMTopicDetailsVC
-@synthesize topicObj;
+@synthesize topicObj, titleStr;
 @synthesize webView, table;
 
 #pragma mark - View Lifecycle
@@ -27,8 +29,8 @@
     [super viewDidLoad];
     
     webView = [[UIWebView alloc] init];
-    webView.backgroundColor = [CMUtils getAverageColorFromImage:appIcon];
     webView.dataDetectorTypes = UIDataDetectorTypeAll;
+    webView.delegate = self;
     [self.view addSubview:webView];
     
     if ([topicObj.isBookmarked boolValue]) {    //load from local db
@@ -45,6 +47,7 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fetchedDetailsOfTopic:)
                                                  name:UPDATED_TOPIC_DETAILS object:nil];
+    self.navigationItem.title = titleStr;
 }
 
 - (void)viewWillLayoutSubviews{
@@ -69,6 +72,15 @@
     
     topicObj = [notification.userInfo valueForKey:@"topicObject"];
     [webView loadHTMLString:topicObj.note baseURL:nil];
+}
+
+-(BOOL) webView:(UIWebView *)inWeb shouldStartLoadWithRequest:(NSURLRequest *)inRequest navigationType:(UIWebViewNavigationType)inType {
+    if (inType == UIWebViewNavigationTypeLinkClicked) {
+        [[UIApplication sharedApplication] openURL:[inRequest URL]];
+        return NO;
+    }
+    
+    return YES;
 }
 
 @end

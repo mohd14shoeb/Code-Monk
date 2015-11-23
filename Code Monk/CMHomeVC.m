@@ -110,7 +110,8 @@ NSString *cellIdentifier = @"cellIdentifier";
     CAGradientLayer *gradient = [CAGradientLayer layer];
     gradient.frame = gradientView.bounds;
     gradient.colors = [NSArray arrayWithObjects:(id)[RGB(147, 209, 255) CGColor],
-                                                (id)[[CMUtils getAverageColorFromImage:appIcon] CGColor], nil];
+                                                (id)[RGB(147, 209, 255) CGColor],
+                                                (id)[[UIColor whiteColor] CGColor], nil];
     [gradientView.layer insertSublayer:gradient atIndex:0];
     [self.view addSubview:gradientView];
     [self.view sendSubviewToBack:gradientView];

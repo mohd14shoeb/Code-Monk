@@ -104,8 +104,10 @@ NSString *bookmarkID = @"bookmarkID";
         dataArr = topicsArr;
     }
     else if (segmentControl.numberOfSegments == 1 && (topicsArr.count > 0) && (exampleArr.count >0)){
-//        add segment
-//        [segmentControl insertSegmentWithTitle:<#(nullable NSString *)#> atIndex:<#(NSUInteger)#> animated:<#(BOOL)#>]
+        [segmentControl removeAllSegments];
+        [segmentControl insertSegmentWithTitle:@"Topics" atIndex:0 animated:NO];
+        [segmentControl insertSegmentWithTitle:@"Examples" atIndex:1 animated:NO];
+        segmentControl.selectedSegmentIndex = 0;
     }
     else{
         dataArr = (segmentControl.selectedSegmentIndex == 0) ? topicsArr : exampleArr;

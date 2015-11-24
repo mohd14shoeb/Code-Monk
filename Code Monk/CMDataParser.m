@@ -270,6 +270,7 @@
             example.input       = [response valueForKey:@"sample_input"];
             example.output      = [response valueForKey:@"sample_output"];
             example.hasDetails  = [NSNumber numberWithBool:YES];
+            example.exampleOfTopic = topic;
         }
     }
     else{   //fetchedExamplesArr is expected to be exactly one here
@@ -289,8 +290,8 @@
         }
     }
     else{   //example details already exist
-        [[NSNotificationCenter defaultCenter] postNotificationName:UPDATED_EXAMPLE_DETAILS
-                                                            object:nil userInfo:@{@"topicObject":topic, @"examplObject":example}];
+        if(topic && example) [[NSNotificationCenter defaultCenter] postNotificationName:UPDATED_EXAMPLE_DETAILS
+                                                            object:nil userInfo:@{@"topicObject":topic, @"exampleObject":example}];
     }
 }
 

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>StringsTable</key>
+	<string>Root</string>
+	<key>PreferenceSpecifiers</key>
+	<array>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>Code Monk Settings</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Title</key>
+			<string>Cache Server Responses</string>
+			<key>Key</key>
+			<string>shouldCacheServerResponses</string>
+			<key>DefaultValue</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>About Code Monk</string>
+			<key>FooterText</key>
+			<string>Code Monk is a series of tutorials that aims to take your programming skills to the next level. There are tutorials across all major concepts of computer science, grouped in basic categories. Every tutorial is accompanied by example problems on that topic and accompanying explanations of the problems.
+
+Code Monk provides high quality content on various topics of Computer Science. You can read the content to strengthen your concepts in these topics and go through practice problems to implement the concepts on real world problems.
+
+==================================
+Created by yogesh singh on 18/11/15.
+Copyright © 2015 yogesh singh.
+All rights reserved.</string>
+		</dict>
+	</array>
+</dict>
+</plist>

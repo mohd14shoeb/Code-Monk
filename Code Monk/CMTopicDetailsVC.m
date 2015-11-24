@@ -61,8 +61,10 @@ NSString *exampleCell = @"exampleCell";
     table.hidden = YES;
     [self.view addSubview:table];
     
+    BOOL shouldUseCache = [[[NSUserDefaults standardUserDefaults] objectForKey:@"shouldCacheServerResponses"] boolValue];
+    
     //fetch topic details
-    if ([topicObj.hasDetails boolValue]) {    //load from local db
+    if ([topicObj.hasDetails boolValue] && shouldUseCache) {    //load from local db
         [webView loadHTMLString:topicObj.note baseURL:nil];
     }
     else{   //fetch from server

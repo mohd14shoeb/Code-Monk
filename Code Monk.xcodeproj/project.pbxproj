@@ -26,6 +26,7 @@
 		EC6005371C030A4300BCC557 /* Example+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6005341C030A4200BCC557 /* Example+CoreDataProperties.m */; };
 		EC6005381C030A4300BCC557 /* Example.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6005361C030A4200BCC557 /* Example.m */; };
 		EC60053B1C03181D00BCC557 /* CMExampleDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EC60053A1C03181D00BCC557 /* CMExampleDetailsVC.m */; };
+		EC623CAB1C044032000B3970 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EC623CAA1C044032000B3970 /* Settings.bundle */; };
 		ECE40C151C03443E00172BCB /* CMBookmarksListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE40C141C03443E00172BCB /* CMBookmarksListVC.m */; };
 		ECFC11CF1C009DD400BA1A96 /* CMTopicDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFC11CE1C009DD400BA1A96 /* CMTopicDetailsVC.m */; };
 /* End PBXBuildFile section */
@@ -59,7 +60,7 @@
 		EC5B76B11BFDDAA900C79D79 /* Topic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Topic.m; sourceTree = "<group>"; };
 		EC5B76B41BFDDFAF00C79D79 /* CMDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDataProvider.h; sourceTree = "<group>"; };
 		EC5B76B51BFDDFAF00C79D79 /* CMDataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDataProvider.m; sourceTree = "<group>"; };
-		EC5B76B71BFDDFDD00C79D79 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		EC5B76B71BFDDFDD00C79D79 /* ReadMe.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
 		EC5B76C31BFE1B9500C79D79 /* CMHomeViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMHomeViewCell.h; sourceTree = "<group>"; };
 		EC5B76C41BFE1B9500C79D79 /* CMHomeViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMHomeViewCell.m; sourceTree = "<group>"; };
 		EC6005331C030A4200BCC557 /* Example+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Example+CoreDataProperties.h"; sourceTree = "<group>"; };
@@ -68,6 +69,7 @@
 		EC6005361C030A4200BCC557 /* Example.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Example.m; sourceTree = "<group>"; };
 		EC6005391C03181D00BCC557 /* CMExampleDetailsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMExampleDetailsVC.h; sourceTree = "<group>"; };
 		EC60053A1C03181D00BCC557 /* CMExampleDetailsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMExampleDetailsVC.m; sourceTree = "<group>"; };
+		EC623CAA1C044032000B3970 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		ECE40C131C03443E00172BCB /* CMBookmarksListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMBookmarksListVC.h; sourceTree = "<group>"; };
 		ECE40C141C03443E00172BCB /* CMBookmarksListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBookmarksListVC.m; sourceTree = "<group>"; };
 		ECFC11CD1C009DD400BA1A96 /* CMTopicDetailsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMTopicDetailsVC.h; sourceTree = "<group>"; };
@@ -106,7 +108,7 @@
 		EC491D181BFC845A0001802F = {
 			isa = PBXGroup;
 			children = (
-				EC5B76B71BFDDFDD00C79D79 /* README.md */,
+				EC5B76B71BFDDFDD00C79D79 /* ReadMe.md */,
 				EC491D231BFC845A0001802F /* Code Monk */,
 				EC491D221BFC845A0001802F /* Products */,
 				870BA19E22FCC25B28A77B86 /* Pods */,
@@ -143,6 +145,7 @@
 				EC491D351BFC845B0001802F /* LaunchScreen.storyboard */,
 				EC5B76A01BFDA28E00C79D79 /* Assets.xcassets */,
 				EC5B769E1BFDA22E00C79D79 /* Media.xcassets */,
+				EC623CAA1C044032000B3970 /* Settings.bundle */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC623CAB1C044032000B3970 /* Settings.bundle in Resources */,
 				EC491D371BFC845B0001802F /* LaunchScreen.storyboard in Resources */,
 				EC5B76A11BFDA28E00C79D79 /* Assets.xcassets in Resources */,
 				EC5B769F1BFDA22E00C79D79 /* Media.xcassets in Resources */,

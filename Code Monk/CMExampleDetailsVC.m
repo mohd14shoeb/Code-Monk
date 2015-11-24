@@ -49,7 +49,9 @@
     webView.hidden = NO;
     [self.view addSubview:webView];
     
-    if ([exampleObj.hasDetails boolValue]) {    //load from local db
+    BOOL shouldUseCache = [[[NSUserDefaults standardUserDefaults] objectForKey:@"shouldCacheServerResponses"] boolValue];
+    
+    if ([exampleObj.hasDetails boolValue] && shouldUseCache) {    //load from local db
         [webView loadHTMLString:exampleObj.statement baseURL:nil];
     }
     else{   //fetch from server

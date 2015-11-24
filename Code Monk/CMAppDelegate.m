@@ -28,7 +28,7 @@
     
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:homeVC];
     
-    navController.navigationBar.tintColor = [UIColor darkGrayColor];
+    navController.navigationBar.tintColor = [UIColor blackColor];
     
     window.rootViewController = navController;
     

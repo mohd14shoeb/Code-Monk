@@ -12,6 +12,5 @@
 @interface CMTopicDetailsVC : UIViewController
 
 @property (nonatomic, strong) Topic *topicObj;
-@property (nonatomic, strong) NSString *titleStr;
 
 @end

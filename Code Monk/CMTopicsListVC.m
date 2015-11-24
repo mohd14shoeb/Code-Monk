@@ -47,8 +47,13 @@ NSString *cellId = @"cellId";
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    
     [self.navigationController.navigationBar setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
+   
     self.navigationItem.title = titleStr;
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction
+                                                                                           target:self action:@selector(shareSelected:)];
 }
 
 - (void)viewWillDisappear:(BOOL)animated{
@@ -67,11 +72,21 @@ NSString *cellId = @"cellId";
     UIView *gradientView = [[UIView alloc] initWithFrame:self.view.frame];
     CAGradientLayer *gradient = [CAGradientLayer layer];
     gradient.frame = gradientView.bounds;
-    gradient.colors = [NSArray arrayWithObjects:(id)[[CMUtils getAverageColorFromImage:appIcon] CGColor],
-                                                (id)[RGB(147, 209, 255) CGColor], nil];
+    gradient.colors = [NSArray arrayWithObjects:(id)[RGB(147, 209, 255) CGColor],
+                       (id)[RGB(147, 209, 255) CGColor],
+                       (id)[[UIColor whiteColor] CGColor], nil];
     [gradientView.layer insertSublayer:gradient atIndex:0];
     [self.view addSubview:gradientView];
     [self.view sendSubviewToBack:gradientView];
+}
+
+- (void)shareSelected:(id)sender{
+    
+    UIActivityViewController *activityViewController = [[UIActivityViewController alloc]
+                                                        initWithActivityItems:@[LINK_TO_SHARE]
+                                                        applicationActivities:nil];
+    
+    [self.navigationController presentViewController:activityViewController animated:YES completion:nil];
 }
 
 
@@ -96,7 +111,6 @@ NSString *cellId = @"cellId";
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellId];
         cell.textLabel.font = [UIFont boldSystemFontOfSize:18];
         cell.backgroundColor = [UIColor clearColor];
-        cell.selectionStyle = UITableViewCellSelectionStyleBlue;
     }
     
     if (indexPath.row < dataArr.count) {
@@ -114,11 +128,10 @@ NSString *cellId = @"cellId";
     
     if (indexPath.row < dataArr.count) {
         
-        Topic *selectedTopic = dataArr[indexPath.row];
         CMTopicDetailsVC *detailsVC = [[CMTopicDetailsVC alloc] init];
+        Topic *selectedTopic = dataArr[indexPath.row];
         detailsVC.topicObj = selectedTopic;
-        detailsVC.titleStr = selectedTopic.title;
-        [self.navigationController showViewController:detailsVC sender:nil];
+        [self.navigationController pushViewController:detailsVC animated:YES];
     }
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];

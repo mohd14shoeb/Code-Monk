@@ -1,15 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="15B42" minimumToolsVersion="Automatic">
+    <entity name="Example" representedClassName="Example" syncable="YES">
+        <attribute name="hasDetails" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="idValue" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="input" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isBookmarked" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="link" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="output" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="solution" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="statement" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="exampleOfTopic" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Topic" inverseName="examples" inverseEntity="Topic" syncable="YES"/>
+    </entity>
     <entity name="Topic" representedClassName="Topic" syncable="YES">
         <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hasDetails" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="idValue" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="isBookmarked" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="link" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="note" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="examples" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Example" inverseName="exampleOfTopic" inverseEntity="Example" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Topic" positionX="-63" positionY="-18" width="128" height="150"/>
+        <element name="Example" positionX="90" positionY="-0" width="128" height="195"/>
+        <element name="Topic" positionX="-126" positionY="-27" width="128" height="180"/>
     </elements>
 </model>

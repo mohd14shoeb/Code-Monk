@@ -18,6 +18,8 @@
 
 + (void)fetchAllTopics{
     
+    CMAppDelegate *appDelegate = (CMAppDelegate *)[[UIApplication sharedApplication] delegate];
+    
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     
@@ -32,6 +34,7 @@
         
         NSLog(@"CMServerHelper fetchAllTopics error : %@", error.localizedDescription);
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+        [appDelegate.window makeToast:error.localizedDescription];
     }];
 }
 
@@ -44,21 +47,73 @@
     NSDictionary *params = [NSDictionary dictionaryWithObject:idValue forKey:@"id"];
 
     [MBProgressHUD showHUDAddedTo:appDelegate.window animated:YES];
+
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     
     [manager POST:TOPIC_DETAILS
        parameters:params
           success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
               
-          [CMDataParser parseTopicDetailsInResponse:responseObject];
-          [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
-          [MBProgressHUD hideAllHUDsForView:appDelegate.window animated:YES];
+            [CMDataParser parseTopicDetailsInResponse:responseObject];
+              
+            [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+            [MBProgressHUD hideAllHUDsForView:appDelegate.window animated:YES];
         
-    } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
+          } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
         
-        NSLog(@"error : %@", error.localizedDescription);
-        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
-        [MBProgressHUD hideAllHUDsForView:appDelegate.window animated:YES];
-        [appDelegate.window makeToast:error.localizedDescription];
+            NSLog(@"error : %@", error.localizedDescription);
+            [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+            [MBProgressHUD hideAllHUDsForView:appDelegate.window animated:YES];
+            [appDelegate.window makeToast:error.localizedDescription];
+    }];
+}
+
++ (void)fetchExampleListsOfTopic:(NSNumber *)idValue{
+    
+    CMAppDelegate *appDelegate = (CMAppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    
+    NSDictionary *params = [NSDictionary dictionaryWithObject:idValue forKey:@"id"];
+    
+    [manager POST:EXAMPLES_LIST parameters:params
+          success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+              
+              [CMDataParser parseExamplesInResponse:responseObject forTopic:idValue];
+              
+          } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
+              
+              NSLog(@"error : %@", error.localizedDescription);
+              [appDelegate.window makeToast:error.localizedDescription];
+          }];
+}
+
++ (void)fetchDetailsOfExample:(NSNumber *)exampleID ofTopic:(NSNumber *)topicID{
+    
+    CMAppDelegate *appDelegate = (CMAppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    
+    NSDictionary *params = @{@"id":exampleID, @"topic_id":topicID};
+    
+    [MBProgressHUD showHUDAddedTo:appDelegate.window animated:YES];
+    
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+    
+    [manager POST:EXAMPLE_DETAIL parameters:params
+          success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+        
+              [CMDataParser parseExampleDetailsInResponse:responseObject forTopic:topicID];
+              
+              [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+              [MBProgressHUD hideAllHUDsForView:appDelegate.window animated:YES];
+              
+          } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
+        
+              NSLog(@"error : %@", error.localizedDescription);
+              [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+              [MBProgressHUD hideAllHUDsForView:appDelegate.window animated:YES];
+              [appDelegate.window makeToast:error.localizedDescription];
     }];
 }
 

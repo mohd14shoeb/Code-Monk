@@ -14,4 +14,12 @@
 
 + (void)parseTopicDetailsInResponse:(id)response;
 
++ (void)parseExamplesInResponse:(id)response forTopic:(NSNumber *)topicID;
+
++ (void)parseExampleDetailsInResponse:(id)response forTopic:(NSNumber *)topicID;
+
++ (void)toggleBookmarkOfTopic:(NSNumber *)topicID;
+
++ (void)toggleBookmarkOfExample:(NSNumber *)exampleID forTopic:(NSNumber *)topicID;
+
 @end

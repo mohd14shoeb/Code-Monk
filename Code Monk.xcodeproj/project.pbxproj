@@ -23,6 +23,10 @@
 		EC5B76B31BFDDAA900C79D79 /* Topic.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5B76B11BFDDAA900C79D79 /* Topic.m */; };
 		EC5B76B61BFDDFAF00C79D79 /* CMDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5B76B51BFDDFAF00C79D79 /* CMDataProvider.m */; };
 		EC5B76C51BFE1B9500C79D79 /* CMHomeViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5B76C41BFE1B9500C79D79 /* CMHomeViewCell.m */; };
+		EC6005371C030A4300BCC557 /* Example+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6005341C030A4200BCC557 /* Example+CoreDataProperties.m */; };
+		EC6005381C030A4300BCC557 /* Example.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6005361C030A4200BCC557 /* Example.m */; };
+		EC60053B1C03181D00BCC557 /* CMExampleDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EC60053A1C03181D00BCC557 /* CMExampleDetailsVC.m */; };
+		ECE40C151C03443E00172BCB /* CMBookmarksListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE40C141C03443E00172BCB /* CMBookmarksListVC.m */; };
 		ECFC11CF1C009DD400BA1A96 /* CMTopicDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFC11CE1C009DD400BA1A96 /* CMTopicDetailsVC.m */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +62,14 @@
 		EC5B76B71BFDDFDD00C79D79 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		EC5B76C31BFE1B9500C79D79 /* CMHomeViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMHomeViewCell.h; sourceTree = "<group>"; };
 		EC5B76C41BFE1B9500C79D79 /* CMHomeViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMHomeViewCell.m; sourceTree = "<group>"; };
+		EC6005331C030A4200BCC557 /* Example+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Example+CoreDataProperties.h"; sourceTree = "<group>"; };
+		EC6005341C030A4200BCC557 /* Example+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Example+CoreDataProperties.m"; sourceTree = "<group>"; };
+		EC6005351C030A4200BCC557 /* Example.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Example.h; sourceTree = "<group>"; };
+		EC6005361C030A4200BCC557 /* Example.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Example.m; sourceTree = "<group>"; };
+		EC6005391C03181D00BCC557 /* CMExampleDetailsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMExampleDetailsVC.h; sourceTree = "<group>"; };
+		EC60053A1C03181D00BCC557 /* CMExampleDetailsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMExampleDetailsVC.m; sourceTree = "<group>"; };
+		ECE40C131C03443E00172BCB /* CMBookmarksListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMBookmarksListVC.h; sourceTree = "<group>"; };
+		ECE40C141C03443E00172BCB /* CMBookmarksListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBookmarksListVC.m; sourceTree = "<group>"; };
 		ECFC11CD1C009DD400BA1A96 /* CMTopicDetailsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMTopicDetailsVC.h; sourceTree = "<group>"; };
 		ECFC11CE1C009DD400BA1A96 /* CMTopicDetailsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMTopicDetailsVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -143,6 +155,10 @@
 				EC5B76AF1BFDDAA900C79D79 /* Topic+CoreDataProperties.m */,
 				EC5B76B01BFDDAA900C79D79 /* Topic.h */,
 				EC5B76B11BFDDAA900C79D79 /* Topic.m */,
+				EC6005331C030A4200BCC557 /* Example+CoreDataProperties.h */,
+				EC6005341C030A4200BCC557 /* Example+CoreDataProperties.m */,
+				EC6005351C030A4200BCC557 /* Example.h */,
+				EC6005361C030A4200BCC557 /* Example.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -153,6 +169,8 @@
 				ECFC11CA1C00963400BA1A96 /* Home View */,
 				ECFC11CB1C00964E00BA1A96 /* Topics List */,
 				ECFC11CC1C00965F00BA1A96 /* Topic Details */,
+				EC60053C1C03183C00BCC557 /* Example Details */,
+				ECE40C161C03444800172BCB /* Bookmarks List */,
 			);
 			name = "View Helpers";
 			sourceTree = "<group>";
@@ -170,6 +188,24 @@
 				EC5B76A31BFDA9E700C79D79 /* CMUtils.m */,
 			);
 			name = "Data Helpers";
+			sourceTree = "<group>";
+		};
+		EC60053C1C03183C00BCC557 /* Example Details */ = {
+			isa = PBXGroup;
+			children = (
+				EC6005391C03181D00BCC557 /* CMExampleDetailsVC.h */,
+				EC60053A1C03181D00BCC557 /* CMExampleDetailsVC.m */,
+			);
+			name = "Example Details";
+			sourceTree = "<group>";
+		};
+		ECE40C161C03444800172BCB /* Bookmarks List */ = {
+			isa = PBXGroup;
+			children = (
+				ECE40C131C03443E00172BCB /* CMBookmarksListVC.h */,
+				ECE40C141C03443E00172BCB /* CMBookmarksListVC.m */,
+			);
+			name = "Bookmarks List";
 			sourceTree = "<group>";
 		};
 		ECFC11CA1C00963400BA1A96 /* Home View */ = {
@@ -325,13 +361,17 @@
 				EC5B76AD1BFDD57100C79D79 /* CMDataParser.m in Sources */,
 				EC491D2C1BFC845A0001802F /* CMHomeVC.m in Sources */,
 				EC5488BF1C004EFA00449F96 /* CMTopicsListVC.m in Sources */,
+				ECE40C151C03443E00172BCB /* CMBookmarksListVC.m in Sources */,
 				EC5B76B61BFDDFAF00C79D79 /* CMDataProvider.m in Sources */,
 				EC5B76A41BFDA9E700C79D79 /* CMUtils.m in Sources */,
 				EC5B76B31BFDDAA900C79D79 /* Topic.m in Sources */,
 				EC491D321BFC845B0001802F /* Code_Monk.xcdatamodeld in Sources */,
 				EC491D291BFC845A0001802F /* CMAppDelegate.m in Sources */,
+				EC6005371C030A4300BCC557 /* Example+CoreDataProperties.m in Sources */,
 				EC5B76AA1BFDD1DE00C79D79 /* CMServerHelper.m in Sources */,
+				EC60053B1C03181D00BCC557 /* CMExampleDetailsVC.m in Sources */,
 				ECFC11CF1C009DD400BA1A96 /* CMTopicDetailsVC.m in Sources */,
+				EC6005381C030A4300BCC557 /* Example.m in Sources */,
 				EC491D261BFC845A0001802F /* main.m in Sources */,
 				EC5B76B21BFDDAA900C79D79 /* Topic+CoreDataProperties.m in Sources */,
 				EC5B76C51BFE1B9500C79D79 /* CMHomeViewCell.m in Sources */,

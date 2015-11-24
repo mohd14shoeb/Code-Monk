@@ -14,4 +14,8 @@
 
 + (void)fetchDetailsOfTopic:(NSNumber *)idValue;
 
++ (void)fetchExampleListsOfTopic:(NSNumber *)idValue;
+
++ (void)fetchDetailsOfExample:(NSNumber *)exampleID ofTopic:(NSNumber *)topicID;
+
 @end

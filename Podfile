@@ -6,5 +6,4 @@ pod "AFNetworking", "~> 2.0"
 pod 'Toast', '~> 3.0'
 pod 'MarqueeLabel'
 pod 'MBProgressHUD'
-pod 'DZNSegmentedControl'
 end

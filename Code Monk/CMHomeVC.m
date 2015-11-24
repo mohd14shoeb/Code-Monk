@@ -11,6 +11,8 @@
 #import "CMDataProvider.h"
 #import "CMHomeViewCell.h"
 #import "CMTopicsListVC.h"
+#import "CMBookmarksListVC.h"
+#import "UIView+Toast.h"
 #import "CMUtils.h"
 
 NSString *cellIdentifier = @"cellIdentifier";
@@ -69,6 +71,14 @@ NSString *cellIdentifier = @"cellIdentifier";
     [titleView addSubview:titleLab];
     titleView.center = self.navigationItem.titleView.center;
     self.navigationItem.titleView = titleView;
+    
+    UIBarButtonItem *bookmarksList = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"bookmarkList"]
+                                                                      style:UIBarButtonItemStylePlain target:self action:@selector(showBookmarks:)];
+    self.navigationItem.rightBarButtonItem = bookmarksList;
+    
+    UIBarButtonItem *shareBtn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction
+                                                                            target:self action:@selector(shareSelected:)];
+    self.navigationItem.leftBarButtonItem = shareBtn;
 }
 
 - (void)viewWillLayoutSubviews{
@@ -115,6 +125,45 @@ NSString *cellIdentifier = @"cellIdentifier";
     [gradientView.layer insertSublayer:gradient atIndex:0];
     [self.view addSubview:gradientView];
     [self.view sendSubviewToBack:gradientView];
+}
+
+- (void)shareSelected:(id)sender{
+    
+    UIActivityViewController *activityViewController = [[UIActivityViewController alloc]
+                                                        initWithActivityItems:@[LINK_TO_SHARE]
+                                                        applicationActivities:nil];
+    
+    [self.navigationController presentViewController:activityViewController animated:YES completion:nil];
+}
+
+- (void)showBookmarks:(id)sender{
+    
+    NSArray *bookmarkedTopics = [CMDataProvider getAllBookmarkedTopics];
+    
+    NSArray *bookmarkedExamples = [CMDataProvider getAllBookmarkedExamples];
+    
+    if ((bookmarkedTopics.count > 0) || (bookmarkedExamples.count > 0)) {
+
+        CMBookmarksListVC *bookmarksVC = [[CMBookmarksListVC alloc] init];
+        bookmarksVC.topicsArr = bookmarkedTopics;
+        bookmarksVC.exampleArr = bookmarkedExamples;
+        [self.navigationController pushViewController:bookmarksVC animated:YES];
+    }
+    else{
+        gridView.alpha = 0.3;
+        
+        [self.view makeToast:nil duration:2.0
+                    position:[NSValue valueWithCGPoint:self.view.center]
+                       title:@"No Topics or Examples are bookmarked"
+                       image:[UIImage imageNamed:@"codemonk_logo"]
+                       style:nil
+                  completion:^(BOOL didTap) {
+                           
+                           [UIView animateWithDuration:0.5 animations:^{
+                                           gridView.alpha = 1;
+                           }];
+        }];
+    }
 }
 
 
@@ -170,7 +219,7 @@ NSString *cellIdentifier = @"cellIdentifier";
         
         topicsVC.dataArr = [CMDataProvider getAllTopicsByFilter:(indexPath.row == 0) ? nil : dataArr[indexPath.row]];
         
-        [self.navigationController showViewController:topicsVC sender:nil];
+        [self.navigationController pushViewController:topicsVC animated:YES];
     }
     
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];

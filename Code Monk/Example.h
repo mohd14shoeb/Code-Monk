@@ -1,19 +1,19 @@
 //
-//  Topic.h
+//  Example.h
 //  Code Monk
 //
-//  Created by yogesh singh on 19/11/15.
+//  Created by yogesh singh on 23/11/15.
 //  Copyright © 2015 yogesh singh. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+@class Topic;
+
 NS_ASSUME_NONNULL_BEGIN
 
-@class Example;
-
-@interface Topic : NSManagedObject
+@interface Example : NSManagedObject
 
 // Insert code here to declare functionality of your managed object subclass
 
@@ -21,4 +21,4 @@ NS_ASSUME_NONNULL_BEGIN
 
 NS_ASSUME_NONNULL_END
 
-#import "Topic+CoreDataProperties.h"
+#import "Example+CoreDataProperties.h"

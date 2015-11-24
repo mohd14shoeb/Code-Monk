@@ -1,5 +1,5 @@
 //
-//  Topic+CoreDataProperties.m
+//  Example+CoreDataProperties.m
 //  Code Monk
 //
 //  Created by yogesh singh on 23/11/15.
@@ -9,18 +9,19 @@
 //  to delete and recreate this implementation file for your updated model.
 //
 
-#import "Topic+CoreDataProperties.h"
+#import "Example+CoreDataProperties.h"
 
-@implementation Topic (CoreDataProperties)
+@implementation Example (CoreDataProperties)
 
-@dynamic category;
 @dynamic idValue;
-@dynamic isBookmarked;
+@dynamic input;
 @dynamic link;
-@dynamic note;
-@dynamic text;
+@dynamic output;
+@dynamic solution;
+@dynamic statement;
 @dynamic title;
 @dynamic hasDetails;
-@dynamic examples;
+@dynamic isBookmarked;
+@dynamic exampleOfTopic;
 
 @end

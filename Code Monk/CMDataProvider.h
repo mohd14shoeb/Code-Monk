@@ -14,4 +14,8 @@
 
 + (NSArray *)getAllCategoriesByFilter:(NSString *)searchText;
 
++ (NSArray *)getAllBookmarkedTopics;
+
++ (NSArray *)getAllBookmarkedExamples;
+
 @end

@@ -70,4 +70,44 @@
     return [uniqueCategories copy];
 }
 
++ (NSArray *)getAllBookmarkedTopics{
+    
+    CMAppDelegate *appDelegate = (CMAppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:TOPIC];
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"isBookmarked == %@", [NSNumber numberWithBool:YES]];
+    
+    [request setPredicate:predicate];
+    
+    NSError *fetchErr = nil;
+    NSArray *fetchedTopics = [appDelegate.managedObjectContext executeFetchRequest:request error:&fetchErr];
+    
+    if (fetchErr) {
+        NSLog(@"CMDataProvider getAllBookmarkedTopics: fetchErr : %@", fetchErr.localizedDescription);
+    }
+    
+    return fetchedTopics;
+}
+
++ (NSArray *)getAllBookmarkedExamples{
+    
+    CMAppDelegate *appDelegate = (CMAppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:EXAMPLE];
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"isBookmarked == %@", [NSNumber numberWithBool:YES]];
+    
+    [request setPredicate:predicate];
+    
+    NSError *fetchErr = nil;
+    NSArray *fetchedExamples = [appDelegate.managedObjectContext executeFetchRequest:request error:&fetchErr];
+    
+    if (fetchErr) {
+        NSLog(@"CMDataProvider getAllBookmarkedExamples: fetchErr : %@", fetchErr.localizedDescription);
+    }
+    
+    return fetchedExamples;
+}
+
 @end

@@ -22,14 +22,14 @@
         titleLab.textAlignment = NSTextAlignmentCenter;
         titleLab.numberOfLines = 2;
         titleLab.font = FONT_LRG;
-        titleLab.textColor = [UIColor blackColor];
+        titleLab.textColor = [CMUtils getAverageColorFromImage:appIcon];
         titleLab.adjustsFontSizeToFitWidth = YES;
         [self addSubview:titleLab];
         
-        self.backgroundColor = [CMUtils getAverageColorFromImage:appIcon];
+        self.backgroundColor = [UIColor whiteColor];
         
         self.layer.borderWidth = 1.0f;
-        self.layer.borderColor = [[UIColor whiteColor] CGColor];
+        self.layer.borderColor = [[UIColor blackColor] CGColor];
         self.layer.cornerRadius = 10.0f;
         
         UIBezierPath *shadow = [UIBezierPath bezierPathWithRect:self.bounds];
